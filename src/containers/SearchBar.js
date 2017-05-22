@@ -1,4 +1,7 @@
 import React, {Component} from 'react'
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { fetchGithubRepos } from '../actions/index'
 
 class SearchBar extends Component {
 
@@ -9,6 +12,7 @@ class SearchBar extends Component {
   
   searchRepos(event) {
     event.preventDefault();
+    this.props.fetchGithubRepos(this.textInput.value)
     this.textInput.value = '';
   }
 
@@ -28,4 +32,8 @@ class SearchBar extends Component {
   }
 }
 
-export default SearchBar;
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({ fetchGithubRepos }, dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(SearchBar);
