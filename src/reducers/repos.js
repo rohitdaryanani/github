@@ -4,6 +4,7 @@ export default (state = null, action) => {
   switch(action.type){
     case FETCH_REPOS:
     return action.payload.data.items;
+    default:
+    return state
   }
-  return state;
 }

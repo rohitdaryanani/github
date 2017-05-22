@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getDetails } from '../../actions/index'
+import { getDetails, getFollowers } from '../../actions/index'
 
 import RepoListItem from '../../components/RepoListItem'
 
@@ -11,6 +11,7 @@ const RepoList = (props) => {
 
   const getRepoDetail = (data) => {
     props.getDetails(data);
+    props.getFollowers(data.owner.followers_url);
   }
 
   const renderRepo = (repo, key) => {
@@ -38,7 +39,7 @@ const mapStateToProps = ({repos}) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators({ getDetails }, dispatch)
+    return bindActionCreators({ getDetails, getFollowers }, dispatch)
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(RepoList);
