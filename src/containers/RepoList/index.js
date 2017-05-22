@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 
-import RepoListItem from '../components/RepoListItem'
+import RepoListItem from '../../components/RepoListItem'
 
 const RepoList = (props) => {
 

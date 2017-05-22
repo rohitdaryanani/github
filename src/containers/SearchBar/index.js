@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { fetchGithubRepos } from '../actions/index'
+import { fetchGithubRepos } from '../../actions/index'
 
 
 const SearchBar = (props) => {
