@@ -1,0 +1,17 @@
+input[type=text] {
+  width: 410px;
+  padding: 9px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+
+input[type=submit] {
+  padding: 14px 24px;
+  line-height: 20px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 25px;
+}

@@ -6,8 +6,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        <RepoList />
+        <div className="container">
+          <SearchBar />
+          <div className="row">
+            <RepoList />
+          </div>
+        </div>
       </div>
     );
   }

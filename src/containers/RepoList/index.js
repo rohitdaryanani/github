@@ -3,21 +3,23 @@ import { connect } from 'react-redux';
 
 import RepoListItem from '../../components/RepoListItem'
 
+import './index.css'
+
 const RepoList = (props) => {
 
   const renderRepo = (repo, key) => {
     return(
-      <div className="col-md-4" key={key}>
+      <div className="mb-3" key={key}>
         <RepoListItem data={repo} />
       </div>
     )
   }
 
   if(!props.repos) {
-    return <div>Search Repos To Begin</div>
+    return <div></div>
   }
   return (
-    <div className="row">
+    <div className="repo-list col-md-6">
       {props.repos.map(renderRepo)}
     </div>
   )
