@@ -2,3 +2,10 @@
   height: 300px;
   overflow-y: scroll;
 }
+
+.card.repolist-item:hover {
+  color: #292b2c;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+  cursor: pointer;
+}

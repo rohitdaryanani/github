@@ -1,8 +1,11 @@
 import { combineReducers } from 'redux';
-import RepoReducer from './repos'
+import ReposReducer from './repos'
+import RepoReducer from './repo'
 
 const rootReducer = combineReducers({
-  repos: RepoReducer
+  repos: ReposReducer,
+  repo: RepoReducer
+
 });
 
 export default rootReducer;

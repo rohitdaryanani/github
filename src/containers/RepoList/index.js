@@ -1,5 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { getDetails } from '../../actions/index'
 
 import RepoListItem from '../../components/RepoListItem'
 
@@ -7,10 +9,14 @@ import './index.css'
 
 const RepoList = (props) => {
 
+  const getRepoDetail = (data) => {
+    props.getDetails(data);
+  }
+
   const renderRepo = (repo, key) => {
     return(
       <div className="mb-3" key={key}>
-        <RepoListItem data={repo} />
+        <RepoListItem data={repo} getRepoDetail={getRepoDetail} />
       </div>
     )
   }
@@ -31,4 +37,8 @@ const mapStateToProps = ({repos}) => {
   };
 }
 
-export default connect(mapStateToProps)(RepoList);
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators({ getDetails }, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(RepoList);

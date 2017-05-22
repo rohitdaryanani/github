@@ -1,10 +1,10 @@
 import React from 'react';
 
-const RepoListItem = ({data}) => {
+const RepoListItem = (props) => {
   return (
-    <div className="card">
+    <div className="card repolist-item" onClick={ () => props.getRepoDetail(props.data)}>
       <div className="card-block">
-        {data.full_name}
+        {props.data.full_name}
       </div>
     </div>
   )
