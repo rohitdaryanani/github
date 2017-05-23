@@ -5,3 +5,7 @@ img {
 .card {
   margin: 0 auto;
 }
+
+.card-title {
+  word-wrap: break-word;
+}

@@ -9,3 +9,7 @@
   border-color: #adadad;
   cursor: pointer;
 }
+
+.card-block {
+  word-wrap: break-word;
+}
